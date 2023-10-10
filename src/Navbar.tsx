@@ -25,8 +25,8 @@ interface CustomLinkProps {
 
 function CustomLink({ to, children, navigate}: CustomLinkProps) {
     return(
-        <li className={window.location.pathname === to ? "active -mb-px mr-1" : "mr-1"}>
-            <Link className={window.location.pathname === to ? "active bg-white inline-block border-l border-t border-r rounded-t py-2 px-4 text-blue-700 font-semibold" : "bg-white inline-block py-2 px-4 text-blue-500 hover:text-blue-800 font-semibold"} 
+        <li className={window.location.pathname === to ? "active" : ""}>
+            <Link className={window.location.pathname === to ? "active" : ""} 
                 to={to}
                 onClick={() => navigate(to)}>
                 {children}
