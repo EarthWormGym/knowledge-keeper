@@ -8,11 +8,11 @@ interface BookCardProps {
 
 const BookCard = ({books, removeBook}: BookCardProps) => {
 
-    return books.map((book: any, index: any) => (
+    return books.map((book: Book, index: number) => (
         <div className="book" key={index}>
             <div className="bookCard" key={book.id}>
                 <div className="bookCard-header">
-                    <img src={book.bookData.image} alt="image of book" />
+                    <img src={book.bookData.image} />
                 </div>
                 <p>{book.bookData.genre}</p>
                 <div className="bookCard-body">
@@ -26,6 +26,10 @@ const BookCard = ({books, removeBook}: BookCardProps) => {
                     <h5>Blurb:</h5>
                     <p>
                         {book.bookData.blurb}
+                    </p>
+                    <h5>Genre:</h5>
+                    <p>
+                        {book.bookData.genre}
                     </p>
                 </div>
                 <div className="icons">
