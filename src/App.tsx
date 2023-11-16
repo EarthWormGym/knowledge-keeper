@@ -4,7 +4,7 @@ import LibraryPage from './Pages/LibraryPage';
 import LoginPage from './Pages/LoginPage';
 import Navbar from './Navbar';
 
-function App() {
+const App = () => {
     return (
         <>
             <Navbar />
